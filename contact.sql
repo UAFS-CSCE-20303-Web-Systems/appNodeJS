@@ -1,10 +1,10 @@
-drop database if exists cs2033;
-drop user if exists 'cs2033user'@'localhost';
-create database cs2033;
-use cs2033;
+drop database if exists csce20303;
+drop user if exists 'csce20303user'@'localhost';
+create database csce20303;
+use csce20303;
 
-create user 'cs2033user'@'localhost' identified by 'cs2033pass';
-grant all on cs2033.* to 'cs2033user'@'localhost';
+create user 'csce20303user'@'localhost' identified by 'csce20303pass';
+grant all on csce20303.* to 'csce20303user'@'localhost';
 
 create table contacts(
    contactID int AUTO_INCREMENT,

@@ -2,9 +2,9 @@ const mysql = require("mysql2");
 
 const pool = mysql.createPool({
   host: "localhost",
-  user: "cs2033user",
-  password: "cs2033pass",
-  database: "cs2033",
+  user: "csce20303user",
+  password: "csce20303pass",
+  database: "csce20303",
   connectionLimit: 10,
 });
 
@@ -26,5 +26,6 @@ function addContact(username, email, callback) {
 }
 
 module.exports = {
-  getContacts, addContact
+  getContacts,
+  addContact,
 };
