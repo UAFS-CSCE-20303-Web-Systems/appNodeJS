@@ -4,6 +4,7 @@ const contactDB = require("./models/contactDB");
 
 const app = express();
 
+// Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
 
@@ -38,7 +39,5 @@ app.post("/add", function (req, res) {
 });
 
 app.listen(3000, function () {
-  console.log(
-    "Server running with function declarations at http://localhost:3000"
-  );
+  console.log("Server running at http://localhost:3000");
 });
