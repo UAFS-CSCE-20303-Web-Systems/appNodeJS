@@ -1,0 +1,26 @@
+{
+  "name": "appnodejs",
+  "version": "1.0.0",
+  "description": "Basic NodeJS, Express, MySQL Server-Side Web Application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UAFS-CSCE-20303-Web-Systems/appNodeJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UAFS-CSCE-20303-Web-Systems/appNodeJS/issues"
+  },
+  "homepage": "https://github.com/UAFS-CSCE-20303-Web-Systems/appNodeJS#readme",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "mysql2": "^3.18.1"
+  }
+}
