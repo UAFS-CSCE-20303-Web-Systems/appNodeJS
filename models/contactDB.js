@@ -11,7 +11,7 @@ const pool = mysql.createPool({
 // Using function declarations inside an object for export
 function getContacts(callback) {
   const sql = "SELECT * FROM contacts";
-  pool.query(sql, function (err, results) {
+  pool.execute(sql, function (err, results) {
     if (err) return callback(err, null);
     callback(null, results);
   });
@@ -19,7 +19,7 @@ function getContacts(callback) {
 
 function addContact(username, email, callback) {
   const sql = "INSERT INTO contacts (username, email) VALUES (?, ?)";
-  pool.query(sql, [username, email], function (err, result) {
+  pool.execute(sql, [username, email], function (err, result) {
     if (err) return callback(err, null);
     callback(null, result);
   });
