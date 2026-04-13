@@ -1,8 +1,14 @@
 # Basic NodeJS, Express, MySQL Server-Side Web Application
 
-To install the Database
+Install Database
 ```
-sudo mysql < contacts.sql
+sudo mysql < contact.sql
 ```
 
-Run the server
+Run Server
+node app.js
+
+Access from Browser
+```
+http://localhost:3000
+```

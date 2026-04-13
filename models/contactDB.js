@@ -8,24 +8,22 @@ const pool = mysql.createPool({
   connectionLimit: 10,
 });
 
-// Using function declarations inside an object for export
+
 function getContacts(callback) {
   const sql = "SELECT * FROM contacts";
-  pool.execute(sql, function (err, results) {
-    if (err) return callback(err, null);
-    callback(null, results);
+  pool.execute(sql, function (err, result, fields) {
+    callback(err,result,fields);
   });
 }
 
-function addContact(username, email, callback) {
+function addContact(userData, callback) {
   const sql = "INSERT INTO contacts (username, email) VALUES (?, ?)";
-  pool.execute(sql, [username, email], function (err, result) {
-    if (err) return callback(err, null);
-    callback(null, result);
+  pool.execute(sql, userData, function (err, result, fields) {
+    callback(err, result, fields);
   });
 }
 
 module.exports = {
   getContacts,
-  addContact,
+  addContact
 };
